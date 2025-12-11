@@ -1,0 +1,80 @@
+body {
+  margin:0;
+  font-family:sans-serif;
+  background:#222;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  height:100vh;
+}
+
+canvas {
+  background:#333;
+  margin-top:10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+#bottomUI {
+  width: 400px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+#overlay {
+  position: fixed;
+  top:0; left:0; width:100%; height:100%;
+  background:rgba(34,34,34,0.95);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  color:white;
+  z-index:50;
+}
+
+#levelSelect {
+  margin-top:20px;
+  display:flex;
+  gap:20px;
+}
+
+.level-btn {
+  font-size:18px;
+  padding:10px 20px;
+  cursor:pointer;
+  border:none;
+  border-radius:8px;
+  color:#000;
+  font-weight:bold;
+}
+
+#gameContainer {
+  position: relative;
+  width: 400px;     /* ширина канваса */
+  height: 400px;    /* высота канваса */
+  margin-top: 10px;
+}
+
+#backBtn {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  padding: 6px 12px;
+  font-size: 18px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#backBtn:hover {
+  background: #666;
+}

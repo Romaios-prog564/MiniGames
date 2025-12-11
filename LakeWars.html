@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" href="favicon/favicon.ico?v=3" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon/favicon.ico?v=3" type="image/x-icon">
+
+
+  <meta charset="UTF-8">
+  <title>Lake Wars</title>
+  <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
+  <link rel="stylesheet" href="LakeWars.css">
+</head>
+<body>
+  <div id="overlay">
+    <h1>Lake Wars</h1>
+    <p>Goal: Survive and defeat all bots! Avoid water tiles.</p>
+    <p>Controls:</p>
+    <ul>
+      <li>Arrow keys to move</li>
+      <li>Press "F" to shoot</li>
+    </ul>
+    <p>Game starts in:</p>
+    <div id="countdown">15</div>
+  </div>
+
+  <!-- Выбор уровня -->
+  <div id="levelSelect" style="display:none;">
+    <button id="easyBtn" class="level-btn" style="background:green;">Easy</button>
+    <button id="mediumBtn" class="level-btn" style="background:yellow;">Medium</button>
+    <button id="hardBtn" class="level-btn" style="background:red;">Hard</button>
+  </div>
+
+  <!-- КОНТЕЙНЕР ДЛЯ КНОПКИ И ИГРЫ -->
+  <div id="gameContainer">
+    <button id="backBtn">← Back</button>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+  </div>
+
+  <div id="bottomUI">
+    <span id="timeBox">Time: 0s</span>
+    <span id="livesBox">Lives: ❤️❤️❤️</span>
+  </div>
+
+  <script src="LakeWars.js"></script>
+</body>
+</html>
