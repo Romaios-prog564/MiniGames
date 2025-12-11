@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="icon" href="favicon/favicon.ico?v=3" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon/favicon.ico?v=3" type="image/x-icon">
+
+  <meta name="description" content="Mini Games by Romaios — play Mini Mines and other fun browser games online.">
+  <meta name="keywords" content="Mini Games, Mini Mines, online games, free games, browser games">
+  <meta name="author" content="Romaios">
+  <meta charset="UTF-8">
+  <title>Mini Games by Romaios</title>
+
+  <!-- Подключение CSS -->
+  <link rel="stylesheet" href="Mini.Mines.css">
+
+</head>
+<body>
+
+<div id="header">
+  <div id="timer">Time: 0s</div>
+  <div id="logo">Mini Mines</div>
+  <div id="minesCount">Mines: 0</div>
+</div>
+
+<div id="legend">
+  <div class="legend-item"><span class="flag-box"></span> Flag = safe</div>
+</div>
+
+<div id="overlay">
+  <h1>Mini Mines Game</h1>
+  <p>Goal: Open all tiles without hitting bombs or getting caught by the monster.</p>
+  <p>How to play:</p>
+  <ul>
+    <li>Arrow keys to move</li>
+    <li>Tiles show color only after opening: Gray 0, Blue 1, Yellow 2, Red 3</li>
+    <li>Every 10 opened tiles, a monster appears</li>
+    <li>Monster moves once every 5 seconds</li>
+    <li>Press "E" to kill a monster if you have enough energy (1 energy per 20 opened tiles)</li>
+    <li>Press "F" + W/A/S/D to place a safe flag on adjacent tile</li>
+    <li>Press "G" + W/A/S/D to remove a flag on adjacent tile</li>
+  </ul>
+  <p>The game will start automatically:</p>
+  <div id="countdown">15</div>
+</div>
+
+<button id="restartBtn">Restart</button>
+<canvas id="game" width="400" height="400"></canvas>
+
+<div id="winBox">
+  <h2>You Win!</h2>
+  <p>All safe tiles opened — nice job!</p>
+  <button id="winRestart">Restart</button>
+</div>
+
+<!-- Подключение JS -->
+<script src="Mini.Mines.js"></script>
+
+</body>
+</html>
