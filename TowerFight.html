@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tower Fight</title>
+  <link rel="stylesheet" href="TowerFight.css">
+
+  <link rel="icon" href="favicon/favicon.ico?v=3" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon/favicon.ico?v=3" type="image/x-icon">
+
+</head>
+<body>
+
+<!-- MENU -->
+<div id="menu">
+  <h1>Tower Fight</h1>
+  <button id="soloBtn">Solo</button>
+  <button id="multiBtn" disabled>Multiplayer</button>
+  <p class="note">Multiplayer doesn't work currently</p>
+</div>
+
+<!-- RULES OVERLAY -->
+<div id="rules" style="display:none; flex-direction:column; align-items:center; justify-content:center;">
+  <div id="rulesText">
+    <h2>Tower Fight Rules</h2>
+    <p>Welcome to Tower Fight! Here's how to play:</p>
+    <ul>
+      <li>Use arrow keys to move your player.</li>
+      <li>Press "F" to shoot bullets at the enemy and enemy generators.</li>
+      <li>Destroy enemy energy generators to temporarily disable their shooting.</li>
+      <li>Your shooting is disabled for 10 seconds when one generator is damaged.</li>
+      <li>If both your generators are destroyed, healing is disabled until restored.</li>
+      <li>Defend your castle and bridge while attacking the enemy.</li>
+      <li>Player heals only inside your castle if generators are alive.</li>
+      <li>The game starts after the 15-second countdown.</li>
+    </ul>
+  </div>
+  <div>Game starts in <span id="rulesTimer">15</span> seconds...</div>
+</div>
+
+<!-- GAME -->
+<canvas id="gameCanvas" width="800" height="800"></canvas>
+<div id="playerMessage"></div>
+
+<script src="TowerFight.js"></script>
+</body>
+</html>

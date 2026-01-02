@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b0f1a;
+  color: white;
+  text-align: center;
+}
+
+/* MENU */
+#menu {
+  margin-top: 60px;
+}
+
+#menu h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+#menu button {
+  font-size: 20px;
+  padding: 12px 26px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#menu button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* RULES OVERLAY */
+#rules {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#rules h2 {
+  font-size: 32px;
+}
+
+#rulesTimer {
+  font-size: 80px;
+  margin-top: 20px;
+}
+
+/* GAME */
+canvas {
+  display: none;
+  margin: 20px auto;
+  background: #111;
+  border: 3px solid #444;
+}
