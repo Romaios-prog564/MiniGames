@@ -104,8 +104,8 @@ yearEl.textContent = new Date().getFullYear();
 
 // COLORS
 const BLACK = [0,0,0];
-const DARK_BLUE = [10,20,50];
-const LIGHT_BLUE = [18, 55, 120];
+const DARK_BLUE = [0,0,139];
+const YELLOW_ORANGE = [255,174,66];
 
 
 function clamp(v,a=0,b=1){ return Math.max(a,Math.min(b,v)); }
@@ -141,16 +141,16 @@ function updateBg(){
     rgb = DARK_BLUE;
   }
   else if (centerY > lakeBottom && centerY < towerTop) {
-    rgb = mix(DARK_BLUE, LIGHT_BLUE, (centerY-lakeBottom)/(towerTop-lakeBottom));
+    rgb = mix(DARK_BLUE, YELLOW_ORANGE, (centerY-lakeBottom)/(towerTop-lakeBottom));
   }
   else if (centerY >= towerTop && centerY <= towerBottom) {
-    rgb = LIGHT_BLUE;
+    rgb = YELLOW_ORANGE;
   }
   else if (centerY < miniTop) {
     rgb = BLACK;
   }
   else {
-    rgb = LIGHT_BLUE;
+    rgb = YELLOW_ORANGE;
   }
 
   document.documentElement.style.setProperty('--bg-color', `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`);
@@ -170,4 +170,5 @@ window.addEventListener('load', updateBg);
 </script>
 </body>
 </html>
+
 
